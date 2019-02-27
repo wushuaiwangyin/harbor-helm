@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "{{ template "harbor.chartmuseum" . }}"
+  namespace: docker-registry
   labels:
 {{ include "harbor.labels" . | indent 4 }}
     component: chartmuseum
