@@ -3,6 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "{{ template "harbor.chartmuseum" . }}"
+  namespace: docker-registry
   labels:
 {{ include "harbor.labels" . | indent 4 }}
 data:
